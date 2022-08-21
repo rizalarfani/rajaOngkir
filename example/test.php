@@ -11,4 +11,4 @@ Config::$apiKey = 'bdb85102046029439d45ca5e400d6107';
 Config::$typeAccount = 'pro';
 
 $regions = new Regions();
-var_dump($regions->getprovince());
+var_dump($regions->getSubDistrict('10'));
