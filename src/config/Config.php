@@ -25,7 +25,7 @@ class Config
      * 
      * @static
      */
-    public static $curlOptions = [];
+    public static $curlOptions = array();
 
 
     /**
@@ -33,7 +33,7 @@ class Config
      */
     const API_URL_STARTER = 'https://api.rajaongkir.com/starter';
     const API_URL_BASIC = 'https://api.rajaongkir.com/basic';
-    const API_URL_PRO = 'https://api.rajaongkir.com/pro';
+    const API_URL_PRO = 'https://pro.rajaongkir.com/api';
 
 
     /** 

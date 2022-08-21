@@ -36,6 +36,7 @@ class HttpClient
     public static function call($url, $apiKey, $params, $method)
     {
         $curl = curl_init();
+
         if (!$apiKey) {
             throw new Exception('ApiKey adalah null, Anda perlu mengatur api-key dari Config.');
         } else {
@@ -46,6 +47,12 @@ class HttpClient
         // Jika method GET
         if ($method == 'GET') {
             if ($params) $url .= '?' . http_build_query($params);
+        }
+        if ($method == 'POST') {
+            $curl_options[CURLOPT_POST] = 1;
+            if ($params) {
+                $curl_options[CURLOPT_POSTFIELDS] = json_encode($params);
+            }
         }
         // Curl Option Config
         $curl_options = array(
@@ -67,27 +74,18 @@ class HttpClient
                 $mergedHeaders = array();
                 $headerOptions = array(CURLOPT_HTTPHEADER => $mergedHeaders);
             }
-
             $curl_options = array_replace_recursive($curl_options, Config::$curlOptions, $headerOptions);
-
-            if ($method == 'POST') {
-                $curl_options[CURLOPT_POST] = 1;
-                if ($params) {
-                    $curl_options[CURLOPT_POSTFIELDS] = json_encode($params);
-                }
-            }
-
-            curl_setopt_array($curl, $curl_options);
-            $result = curl_exec($curl);
-            if ($result === false) {
-                throw new Exception('CURL Error: ' . curl_error($curl), curl_errno($curl));
-            } else {
-                try {
-                    $result_array = json_decode($result, true);
-                    return $result_array;
-                } catch (\Throwable $th) {
-                    throw new Exception('API Request Error unable to json_decode API response: ' . $result . 'for Requset URL ' . $url);
-                }
+        }
+        curl_setopt_array($curl, $curl_options);
+        $result = curl_exec($curl);
+        if ($result === false) {
+            throw new Exception('CURL Error: ' . curl_error($curl), curl_errno($curl));
+        } else {
+            try {
+                $result_array = json_decode($result, true);
+                return $result_array;
+            } catch (\Throwable $th) {
+                throw new Exception('API Request Error unable to json_decode API response: ' . $result . 'for Requset URL ' . $url);
             }
         }
     }
