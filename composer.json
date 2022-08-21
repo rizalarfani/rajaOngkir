@@ -4,7 +4,7 @@
     "license": "MIT",
     "type": "library",
     "keywords": ["rajaongkir","PHP"],
-    "minimum-stability":"dev",
+    "version": "dev-master",
     "authors": [
         {
             "name": "Rijal Arfani",
