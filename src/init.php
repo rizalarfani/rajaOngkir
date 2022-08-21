@@ -1,6 +1,6 @@
 <?php
 
-namespace RajaOngkir;
+namespace RizalArfani\RajaOngkir;
 
 use FFI\Exception;
 
@@ -15,10 +15,10 @@ if (!function_exists('curl_init') || !function_exists('curl_exec')) {
 }
 
 // Load Class Config
-require_once('src/config/Config.php');
+require_once('config/Config.php');
 
 // Load Class HttpClient
-require_once('src/httpClient/httpClient.php');
+require_once('httpClient/httpClient.php');
 
 // Load Service
-require_once('src/service/regions.php');
+require_once('service/regions.php');

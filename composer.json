@@ -1,0 +1,22 @@
+{
+    "name": "rizalarfani/rajaongkir",
+    "description": "Handle API Raja Ongkir Untuk PHP",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["rajaongkir","PHP"],
+    "authors": [
+        {
+            "name": "Rijal Arfani",
+            "email": "arfanirizal22@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "RizalArfani\\src\\": "src"
+        }
+    }
+}
