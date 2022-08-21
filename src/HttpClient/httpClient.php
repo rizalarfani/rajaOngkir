@@ -7,7 +7,6 @@ use RajaOngkir\Config\Config;
 
 class HttpClient
 {
-
     /**
      * Request HTTP Client Method GET
      */
