@@ -27,6 +27,34 @@ class Config
      */
     public static $curlOptions = array();
 
+    /**
+     * Rajaongkir courier list.
+     * 
+     * @static
+     */
+    public static $couriersList = [
+        'jne'       => 'Jalur Nugraha Ekakurir (JNE)',
+        'pos'       => 'POS Indonesia (POS)',
+        'tiki'      => 'Citra Van Titipan Kilat (TIKI)',
+        'pcp'       => 'Priority Cargo and Package (PCP)',
+        'esl'       => 'Eka Sari Lorena (ESL)',
+        'rpx'       => 'RPX Holding (RPX)',
+        'pandu'     => 'Pandu Logistics (PANDU)',
+        'wahana'    => 'Wahana Prestasi Logistik (WAHANA)',
+        'sicepat'   => 'SiCepat Express (SICEPAT)',
+        'j&t'       => 'J&T Express (J&T)',
+        'pahala'    => 'Pahala Kencana Express (PAHALA)',
+        'cahaya'    => 'Cahaya Logistik (CAHAYA)',
+        'sap'       => 'SAP Express (SAP)',
+        'jet'       => 'JET Express (JET)',
+        'indah'     => 'Indah Logistic (INDAH)',
+        'slis'      => 'Solusi Express (SLIS)',
+        'expedito*' => 'Expedito*',
+        'dse'       => '21 Express (DSE)',
+        'first'     => 'First Logistics (FIRST)',
+        'ncs'       => 'Nusantara Card Semesta (NCS)',
+        'star'      => 'Star Cargo (STAR)',
+    ];
 
     /**
      * URL Api Raja Ongkir
