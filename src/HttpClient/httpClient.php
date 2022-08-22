@@ -1,9 +1,9 @@
 <?php
 
-namespace RajaOngkir\HttpClient;
+namespace RizalArfani\RajaOngkir\HttpClient;
 
 use FFI\Exception;
-use RajaOngkir\Config\Config;
+use RizalArfani\RajaOngkir\Config\Config;
 
 class HttpClient
 {

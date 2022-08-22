@@ -1,9 +1,9 @@
 <?php
 
-namespace RajaOngkir\service\cost;
+namespace RizalArfani\RajaOngkir\service\cost;
 
-use RajaOngkir\Config\Config;
-use RajaOngkir\HttpClient\HttpClient;
+use RizalArfani\RajaOngkir\Config\Config;
+use RizalArfani\RajaOngkir\HttpClient\HttpClient;
 
 class Cost
 {

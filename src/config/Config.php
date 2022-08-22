@@ -1,6 +1,6 @@
 <?php
 
-namespace RajaOngkir\Config;
+namespace RizalArfani\RajaOngkir\Config;
 
 use FFI\Exception;
 

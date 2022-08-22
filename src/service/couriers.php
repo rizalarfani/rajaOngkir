@@ -1,8 +1,8 @@
 <?php
 
-namespace RajaOngkir\service\couriers;
+namespace RizalArfani\RajaOngkir\service\couriers;
 
-use RajaOngkir\Config\Config;
+use RizalArfani\RajaOngkir\Config\Config;
 
 class Couriers
 {

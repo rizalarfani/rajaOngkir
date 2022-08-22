@@ -1,9 +1,9 @@
 <?php
 
-namespace RajaOngkir\service;
+namespace RizalArfani\RajaOngkir\service;
 
-use RajaOngkir\HttpClient\HttpClient;
-use RajaOngkir\Config\Config;
+use RizalArfani\RajaOngkir\HttpClient\HttpClient;
+use RizalArfani\RajaOngkir\Config\Config;
 
 class Regions
 {

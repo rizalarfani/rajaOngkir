@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RizalArfani\\src\\": "src"
+            "RizalArfani\\RajaOngkir\\": "src/"
         }
     }
 }

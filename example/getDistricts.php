@@ -2,8 +2,8 @@
 
 namespace RajaOngkir;
 
-use RajaOngkir\Config\Config;
-use RajaOngkir\service\Regions;
+use RizalArfani\RajaOngkir\Config\Config;
+use RizalArfani\RajaOngkir\service\Regions;
 
 require_once('../src/init.php');
 
