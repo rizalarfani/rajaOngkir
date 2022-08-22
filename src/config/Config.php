@@ -57,6 +57,50 @@ class Config
     ];
 
     /**
+     * List Supported Couriers
+     */
+    public static $supportedCouriers = [
+        'starter' => [
+            'jne',
+            'pos',
+            'tiki',
+        ],
+        'basic'   => [
+            'jne',
+            'pos',
+            'tiki',
+            'pcp',
+            'esl',
+            'rpx',
+        ],
+        'pro'     => [
+            'jne',
+            'pos',
+            'tiki',
+            'rpx',
+            'pandu',
+            'wahana',
+            'sicepat',
+            'jnt',
+            'pahala',
+            'sap',
+            'jet',
+            'indah',
+            'dse',
+            'slis',
+            'first',
+            'ncs',
+            'star',
+            'ninja',
+            'lion',
+            'idl',
+            'rex',
+            'ide',
+            'sentral'
+        ],
+    ];
+
+    /**
      * URL Api Raja Ongkir
      */
     const API_URL_STARTER = 'https://api.rajaongkir.com/starter';

@@ -18,6 +18,7 @@
 
     use RajaOngkir\Config\Config;
     use RajaOngkir\service\Regions;
+    use RajaOngkir\service\couriers\Couriers;
 
     require_once('../src/init.php');
 
@@ -26,6 +27,9 @@
 
     $regions = new Regions();
     $getProvince = $regions->getprovince();
+
+    $couriers = new Couriers();
+    $getCouriers = $couriers->getCouriers();
     ?>
 
     <div class="container">
@@ -51,6 +55,15 @@
                     <label for="exampleFormControlSelect1">Districts</label>
                     <select class="form-control select2" id="districts">
                         <option value="">--Pilih Districts--</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Courier</label>
+                    <select class="form-control select2" id="courier">
+                        <option value="">--Pilih Courier--</option>
+                        <?php foreach ($getCouriers as $courier) : ?>
+                            <option value="<?php echo $courier ?>"><?php echo $courier ?></option>
+                        <?php endforeach ?>
                     </select>
                 </div>
             </div>

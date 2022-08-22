@@ -3,6 +3,7 @@
 namespace RajaOngkir;
 
 use RajaOngkir\Config\Config;
+use RajaOngkir\service\couriers\Couriers;
 use RajaOngkir\service\Regions;
 
 require_once('../src/init.php');
