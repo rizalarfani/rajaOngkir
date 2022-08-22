@@ -3,7 +3,7 @@
 // namespace RajaOngkir;
 
 use RizalArfani\RajaOngkir\Config\Config;
-use RizalArfani\RajaOngkir\service\Regions;
+use RizalArfani\RajaOngkir\Service\Regions;
 
 require_once('../src/init.php');
 

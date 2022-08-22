@@ -1,7 +1,5 @@
 <?php
 
-namespace RizalArfani\RajaOngkir;
-
 use FFI\Exception;
 
 // Chek Version PHP
@@ -23,4 +21,4 @@ require_once('httpClient/httpClient.php');
 // Load Service
 require_once('service/regions.php');
 require_once('service/cost.php');
-require_once('service/couriers.php');
+// require_once('service/couriers.php');

@@ -1,6 +1,6 @@
 <?php
 
-namespace RizalArfani\RajaOngkir\service\couriers;
+namespace RizalArfani\RajaOngkir\Service;
 
 use RizalArfani\RajaOngkir\Config\Config;
 

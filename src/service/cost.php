@@ -1,6 +1,6 @@
 <?php
 
-namespace RizalArfani\RajaOngkir\service\cost;
+namespace RizalArfani\RajaOngkir\Service;
 
 use RizalArfani\RajaOngkir\Config\Config;
 use RizalArfani\RajaOngkir\HttpClient\HttpClient;

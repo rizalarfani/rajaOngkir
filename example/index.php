@@ -18,7 +18,7 @@
 
     use RizalArfani\RajaOngkir\Config\Config;
     use RizalArfani\RajaOngkir\service\Regions;
-    use RizalArfani\RajaOngkir\service\couriers\Couriers;
+    use RizalArfani\RajaOngkir\service\couriers;
 
     require_once('../src/init.php');
 
