@@ -21,7 +21,7 @@ class Cost
      * 
      * @return mixed
      */
-    public function getCost($params = [])
+    public function getCost($params)
     {
         return HttpClient::post($this->url . '/cost', $this->api_key, $params);
     }

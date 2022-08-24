@@ -44,27 +44,24 @@ class HttpClient
                 throw new Exception('Api key tidak boleh kosong, Harap isi apiKey');
             }
         }
+
         // Jika method GET
         if ($method == 'GET') {
             if ($params) $url .= '?' . http_build_query($params);
         }
-        if ($method == 'POST') {
-            $curl_options[CURLOPT_POST] = 1;
-            if ($params) {
-                $curl_options[CURLOPT_POSTFIELDS] = json_encode($params);
-            }
-        }
+
         // Curl Option Config
         $curl_options = array(
             CURLOPT_URL => $url,
             CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
                 'Accept: application/json',
+                "content-type: application/x-www-form-urlencoded",
                 'key: ' . Config::$apiKey,
             ),
             CURLOPT_FRESH_CONNECT => true,
             CURLOPT_RETURNTRANSFER => true
         );
+
         // Merge Confin in Congi CurlOptions
         if (count(Config::$curlOptions)) {
             if (Config::$curlOptions[CURLOPT_HTTPHEADER]) {
@@ -76,7 +73,16 @@ class HttpClient
             }
             $curl_options = array_replace_recursive($curl_options, Config::$curlOptions, $headerOptions);
         }
+
+        if ($method == 'POST') {
+            $curl_options[CURLOPT_POST] = 1;
+            if ($params) {
+                $curl_options[CURLOPT_POSTFIELDS] = http_build_query($params);
+            }
+        }
+
         curl_setopt_array($curl, $curl_options);
+
         $result = curl_exec($curl);
         if ($result === false) {
             throw new Exception('CURL Error: ' . curl_error($curl), curl_errno($curl));
