@@ -57,7 +57,7 @@
 
     require_once('../src/init.php');
 
-    Config::$apiKey = 'bdb85102046029439d45ca5e400d6107';
+    Config::$apiKey = '';
     Config::$typeAccount = 'pro';
 
     $couriers = new Couriers();

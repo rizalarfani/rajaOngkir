@@ -22,7 +22,7 @@
 
     require_once('../src/init.php');
 
-    Config::$apiKey = 'bdb85102046029439d45ca5e400d6107';
+    Config::$apiKey = '';
     Config::$typeAccount = 'pro';
 
     $regions = new Regions();
@@ -35,7 +35,7 @@
     <div class="container">
         <h1 class="text-center">Example Raja Ongkir</h1>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <h3 class="text-center">Tujuan</h3>
                 <div class="form-group">
                     <label for="Berat Barang">Berat Barang</label>
@@ -72,10 +72,13 @@
                     </select>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <h3 class="text-center">Hasil Pengecekan</h3>
                 <br>
                 <div class="service"></div>
+            </div>
+            <div class="col-sm-4">
+                <div class="cart"></div>
             </div>
         </div>
     </div>
@@ -150,10 +153,12 @@
                             var data = response.data;
                             $.each(data, function(index, value) {
                                 var service = value.service + ' (' + value.description + ')';
-                                var valueData = value.cost[0].value + ',' + service;
                                 html += `
                                     <div class="custom-control custom-radio mr-3 ongkir">
-                                        <input type="radio" name="ongkir" value="` + valueData + `" class="custom-control-input" id="` + value.service + `">
+                                        <input type="radio" name="ongkir" value="` + value.cost[0].value + `" 
+                                        data-service="` + value.service + `" 
+                                        data-description="` + value.description + `"
+                                        class="custom-control-input  courier_service">
                                         <label class="custom-control-label text-red" for="` + value.service + `">` + value.service + ` (` + value.description + `)</label>
                                     </div>
                                     <label class="ml-4">Ongkir : ` + convertToRupiah(value.cost[0].value) + `</label>
