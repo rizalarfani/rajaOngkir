@@ -13,10 +13,10 @@ Config::$typeAccount = 'pro';
 $cost = new Cost();
 
 $params = [
-    'origin' => '472', // ID kota/kabupaten atau kecamatan asal
-    'originType' => 'city',
+    'origin' => '386', // ID kota/kabupaten atau kecamatan asal
+    'originType' => 'city', // Tipe origin: 'city' atau 'subdistrict'
     'destination' => $_POST['city'], // ID kota/kabupaten atau kecamatan tujuan
-    'destinationType' => 'city',
+    'destinationType' => 'city', // Tipe destination: 'city' atau 'subdistrict'.
     'weight' => $_POST['weight'], // Berat Kiriman dalam gram,
     'courier' => $_POST['courier'], // Code courier
 ];
@@ -31,7 +31,7 @@ if ($getCost['rajaongkir']['status']['code'] == 200) {
 } else {
     $response = [
         'status' => false,
-        'message' => $decode['rajaongkir']['status']['description'],
+        'message' => $getCost['rajaongkir']['status']['description'],
     ];
 }
 echo json_encode($response, true);

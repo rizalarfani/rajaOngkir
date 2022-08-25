@@ -72,6 +72,7 @@
                     </select>
                 </div>
             </div>
+            <div id="alert"></div>
             <div class="col-sm-4">
                 <h3 class="text-center">Hasil Pengecekan</h3>
                 <br>
@@ -149,6 +150,7 @@
                     },
                     success: function(response) {
                         if (response.status) {
+                            $('.alert').remove();
                             var html = '';
                             var data = response.data;
                             $.each(data, function(index, value) {
@@ -166,7 +168,8 @@
                             });
                             $('.service').append(html);
                         } else {
-                            console.log('mene');
+                            alert = '<div class="alert alert-warning">' + response.message + '</div>';
+                            $('#alert').append(alert);
                         }
                     },
                     error: function(e) {
